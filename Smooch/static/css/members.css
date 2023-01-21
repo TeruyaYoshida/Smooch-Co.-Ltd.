@@ -1,0 +1,16 @@
+section#members{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+section#members h2{
+    margin-bottom: 20px;
+}
+section#members li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+section#members img{
+    width: 300px;
+    height: auto;
+}
