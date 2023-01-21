@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="{{ url_for('members') }}">Members</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Welcome to Smooch Companey!</h1>
+        </header>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna id suscipit blandit, ipsum quam accumsan augue, non congue orci magna ut est. </p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li><a href="{{ url_for('service1') }}">Service 1</a></li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+        <section id="members">
+            <h2><a href="{{ url_for('members') }}">Our Members</a></h2>
+            <ul>
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+            </ul>
+        </section>        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <footer>
+            <p>Copyright ©2022 Smooch co.,Ltd.</p>
+        </footer>
+    </body>
+</html>
